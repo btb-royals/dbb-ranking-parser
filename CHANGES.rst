@@ -5,6 +5,6 @@ DBB Ranking Parser Changelog
 Version 0.1
 -----------
 
-not yet released
+Released March 5, 2016
 
 - first official release

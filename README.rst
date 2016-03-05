@@ -85,5 +85,5 @@ Its target URL should look like this (assuming the league's ID is
 :Copyright: 2006-2016 Jochen Kupperschmidt
 :Date: 05-Mar-2016
 :License: MIT, see LICENSE for details.
-:Version: 0.1-dev
+:Version: 0.1
 :Website: http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
