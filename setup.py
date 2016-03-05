@@ -10,7 +10,7 @@ with codecs.open('README.rst', encoding='utf-8') as f:
 
 
 setup(
-    name='dbbrankingparser',
+    name='dbb-ranking-parser',
     version='0.1-dev',
     description='Extract league rankings from the DBB (Deutscher Basketball Bund e.V.) website.',
     long_description=long_description,

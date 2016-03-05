@@ -23,7 +23,7 @@ Install this package via pip_:
 
 .. code:: sh
 
-    $ pip install dbbrankingparser
+    $ pip install dbb-ranking-parser
 
 Because of the dependency on lxml_, this will also require the header
 files for the targeted Python_ version as well as those for libxml2_ and
