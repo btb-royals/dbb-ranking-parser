@@ -19,7 +19,8 @@ from urllib.request import Request, urlopen
 from lxml.html import document_fromstring
 
 
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.0'
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) ' \
+             'Gecko/20100101 Firefox/38.0 Iceweasel/38.6.0'
 
 
 def load_ranking(url):
@@ -49,7 +50,9 @@ def _parse_rank(tr):
     """Extract a single ranking from a table row."""
     withdrawn = _is_team_withdrawn(tr)
 
-    xpath_expression = 'td/nobr/strike/text()' if withdrawn else 'td/nobr/text()'
+    xpath_expression = 'td/nobr/strike/text()' if withdrawn \
+                       else 'td/nobr/text()'
+
     values = tr.xpath(xpath_expression)
 
     attributes = _convert_attributes(values)
