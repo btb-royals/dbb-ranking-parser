@@ -14,7 +14,7 @@ setup(
     version='0.1-dev',
     description='Extract league rankings from the DBB (Deutscher Basketball Bund e.V.) website.',
     long_description=long_description,
-    url='http://homework.nwsnet.de/',
+    url='http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser',
     author='Jochen Kupperschmidt',
     author_email='homework@nwsnet.de',
     license='MIT',
