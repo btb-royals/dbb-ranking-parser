@@ -25,12 +25,16 @@ USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) ' \
 
 def load_ranking(url):
     """Fetch the content of the URL and parse it."""
+    html = _fetch_html(url)
+    return parse(html)
+
+
+def _fetch_html(url):
+    """Return the content of that URL."""
     request_headers = {'User-Agent': USER_AGENT}
     request = Request(url, headers=request_headers)
 
-    response_body = urlopen(request).read().decode('utf-8')
-
-    return parse(response_body)
+    return urlopen(request).read().decode('utf-8')
 
 
 def parse(html):
