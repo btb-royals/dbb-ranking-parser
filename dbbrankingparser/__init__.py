@@ -17,7 +17,7 @@ from .document import parse
 from .http import fetch_content
 
 
-def load_ranking(url):
+def load_ranking_from_url(url):
     """Fetch the URL's content and yield ranks extracted from it."""
     html = fetch_content(url)
     return parse(html)

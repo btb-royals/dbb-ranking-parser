@@ -61,12 +61,12 @@ Its target URL should look like this (assuming the league's ID is
 
 .. code:: python
 
-    from dbbrankingparser import load_ranking
+    from dbbrankingparser import load_ranking_from_url
 
 
     URL = '<see example above>'
 
-    ranking = load_ranking(URL)
+    ranking = load_ranking_from_url(URL)
 
     top_team = ranking[0]
     print('Top team:', top_team['name'])
