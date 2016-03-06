@@ -19,7 +19,7 @@ setup(
     author_email='homework@nwsnet.de',
     license='MIT',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Other Audience',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
