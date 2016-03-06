@@ -7,7 +7,7 @@
 
 import unittest
 
-from dbbrankingparser import parse
+from dbbrankingparser.document import parse
 
 
 class DocumentParseTest(unittest.TestCase):
