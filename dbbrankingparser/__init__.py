@@ -14,27 +14,16 @@ The resulting data is structured as a list of dictionaries.
 """
 
 from functools import partial
-from urllib.request import Request, urlopen
 
 from lxml.html import document_fromstring
 
-
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:38.0) ' \
-             'Gecko/20100101 Firefox/38.0 Iceweasel/38.6.0'
+from .http import fetch_content
 
 
 def load_ranking(url):
     """Fetch the content of the URL and parse it."""
-    html = _fetch_html(url)
+    html = fetch_content(url)
     return parse(html)
-
-
-def _fetch_html(url):
-    """Return the content of that URL."""
-    request_headers = {'User-Agent': USER_AGENT}
-    request = Request(url, headers=request_headers)
-
-    return urlopen(request).read().decode('utf-8')
 
 
 def parse(html):
