@@ -38,11 +38,11 @@ class RankingParserTest(unittest.TestCase):
             """
 
         actual = parse(html)
-        self.assertEqual(actual, [])
+        self.assertEqual(list(actual), [])
 
     def test_parse_valid_ranking(self):
         actual = parse(HTML)
-        self.assertEqual(actual, EXPECTED)
+        self.assertEqual(list(actual), EXPECTED)
 
 
 EXPECTED = [

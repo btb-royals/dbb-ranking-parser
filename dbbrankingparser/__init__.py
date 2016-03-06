@@ -20,13 +20,13 @@ from .http import fetch_content
 
 
 def load_ranking(url):
-    """Fetch the content of the URL and parse it."""
+    """Fetch the URL's content and yield ranks extracted from it."""
     html = fetch_content(url)
     return parse(html)
 
 
 def parse(html):
-    """Extract ranking data from HTML document."""
+    """Yield ranks extracted from HTML document."""
     root = document_fromstring(html)
 
     trs = select_rank_rows(root)
@@ -41,9 +41,11 @@ def select_rank_rows(root):
 
 
 def _parse_rank_rows(trs):
-    """Attempt to extract a ranks' properties from table rows."""
-    ranks = map(_parse_rank_row, trs)
-    return list(filter(None, ranks))
+    """Yield ranks extracted from table rows."""
+    for tr in trs:
+        rank = _parse_rank_row(tr)
+        if rank:
+            yield rank
 
 
 def _parse_rank_row(tr):
