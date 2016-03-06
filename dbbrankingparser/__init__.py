@@ -37,16 +37,24 @@ def parse(html):
     """Extract ranking data from HTML document."""
     root = document_fromstring(html)
 
-    # Find all table rows with team and ranking data.
-    trs = root.xpath(
+    trs = select_rank_rows(root)
+
+    return _parse_rank_rows(trs)
+
+
+def select_rank_rows(root):
+    """Return the table rows that are expected to contain rank data."""
+    return root.xpath(
         'body/form/table[@class="sportView"][2]/tr[position() > 1]')
 
-    # Fetch row cells' contents.
-    ranks = map(_parse_rank, trs)
+
+def _parse_rank_rows(trs):
+    """Attempt to extract a ranks' properties from table rows."""
+    ranks = map(_parse_rank_row, trs)
     return list(filter(None, ranks))
 
 
-def _parse_rank(tr):
+def _parse_rank_row(tr):
     """Attempt to extract a single rank's properties from a table row."""
     withdrawn = _is_team_withdrawn(tr)
 
