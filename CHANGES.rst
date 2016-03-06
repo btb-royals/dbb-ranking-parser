@@ -5,7 +5,7 @@ DBB Ranking Parser Changelog
 Version 0.2
 -----------
 
-not yet released
+Released March 6, 2016
 
 - It is now sufficient to specify just the league ID instead of the full
   URL. The latter is still possible, though.

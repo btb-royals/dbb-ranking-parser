@@ -124,5 +124,5 @@ sole argument:
 :Copyright: 2006-2016 Jochen Kupperschmidt
 :Date: 06-Mar-2016
 :License: MIT, see LICENSE for details.
-:Version: 0.2-dev
+:Version: 0.2
 :Website: http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
