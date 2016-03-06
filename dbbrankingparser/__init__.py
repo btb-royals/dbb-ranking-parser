@@ -13,10 +13,9 @@ The resulting data is structured as a list of dictionaries.
 :License: MIT, see LICENSE for details.
 """
 
-from functools import partial
-
 from lxml.html import document_fromstring
 
+from .conversion import convert_attributes
 from .http import fetch_content
 
 
@@ -59,7 +58,7 @@ def _parse_rank_row(tr):
     if not values:
         return None
 
-    attributes = _convert_attributes(values)
+    attributes = convert_attributes(values)
     attributes['withdrawn'] = withdrawn
     return attributes
 
@@ -67,32 +66,3 @@ def _parse_rank_row(tr):
 def _is_team_withdrawn(tr):
     """Return `True` if the markup indicates that the team has withdrawn."""
     return bool(tr.xpath('td[2]/nobr/strike'))
-
-
-def _convert_attributes(values):
-    """Convert values using a predefined function.
-
-    Return a dictionary.
-    """
-    return {name: converter(value)
-            for (name, converter), value
-            in zip(ATTRIBUTES, values)}
-
-
-def intpair_factory(separator):
-    return partial(intpair, separator=separator)
-
-
-def intpair(value, separator):
-    return tuple(map(int, value.split(separator, 1)))
-
-
-ATTRIBUTES = [
-    ('rank', int),
-    ('name', str),
-    ('games', int),
-    ('wonlost', intpair_factory('/')),
-    ('points', int),
-    ('baskets', intpair_factory(':')),
-    ('difference', int),
-]
