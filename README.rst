@@ -59,6 +59,9 @@ Its target URL should look like this (assuming the league's ID is
 12345):
 ``http://www.basketball-bund.net/public/tabelle.jsp?print=1&viewDescKey=sport.dbb.views.TabellePublicView/index.jsp_&liga_id=12345``
 
+The league ID has to be identified manually in any of the URLs specific
+for that league (ranking, schedule, stats).
+
 For convenience, specifying only the league ID is sufficient; the URL
 will be assembled automatically. (Obviously, this might break when the
 URL structure changes on the DBB website.)
