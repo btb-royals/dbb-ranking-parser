@@ -47,7 +47,7 @@ def parse(html):
 
 
 def _parse_rank(tr):
-    """Extract a single ranking from a table row."""
+    """Attempt to extract a single rank's properties from a table row."""
     withdrawn = _is_team_withdrawn(tr)
 
     xpath_expression = 'td/nobr/strike/text()' if withdrawn \
