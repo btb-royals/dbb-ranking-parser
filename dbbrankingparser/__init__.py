@@ -98,7 +98,7 @@ def intpair(value, separator):
     return tuple(map(int, value.split(separator, 1)))
 
 
-ATTRIBUTES = (
+ATTRIBUTES = [
     ('rank', int),
     ('name', str),
     ('games', int),
@@ -106,4 +106,4 @@ ATTRIBUTES = (
     ('points', int),
     ('baskets', intpair_factory(':')),
     ('difference', int),
-)
+]
