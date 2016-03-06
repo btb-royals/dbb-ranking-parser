@@ -73,7 +73,7 @@ URL structure changes on the DBB website.)
 
     league_id = 12345
 
-    ranking = load_ranking_for_league(league_id)
+    ranking = list(load_ranking_for_league(league_id))
 
     top_team = ranking[0]
     print('Top team:', top_team['name'])
@@ -87,7 +87,11 @@ The URL can be specified explicitly, too:
 
     URL = '<see example above>'
 
-    ranking = load_ranking_from_url(URL)
+    ranking = list(load_ranking_from_url(URL))
+
+Note that a call to a ``load_ranking_*`` method returns a generator. To
+keep its elements around, and also to access them by index, they can be
+fed into a list (as shown above).
 
 
 .. _DBB:                  http://www.basketball-bund.net/
