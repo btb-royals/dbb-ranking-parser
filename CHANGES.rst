@@ -9,6 +9,7 @@ not yet released
 
 - Return nothing when parsing irrelevant HTML table rows.
 - Return extracted ranks as a generator instead of a list.
+- Split code over several modules.
 
 
 Version 0.1
