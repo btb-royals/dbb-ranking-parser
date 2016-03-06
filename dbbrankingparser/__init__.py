@@ -55,6 +55,9 @@ def _parse_rank(tr):
 
     values = tr.xpath(xpath_expression)
 
+    if not values:
+        return None
+
     attributes = _convert_attributes(values)
     attributes['withdrawn'] = withdrawn
     return attributes

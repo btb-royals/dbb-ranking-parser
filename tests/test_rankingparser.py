@@ -12,7 +12,35 @@ from dbbrankingparser import parse
 
 class RankingParserTest(unittest.TestCase):
 
-    def test_parse(self):
+    def test_parse_empty_ranking(self):
+        html = """\
+            <html>
+              <body>
+
+                <form>
+
+                  <table class="sportView">
+                  </table>
+
+                  <table class="sportView">
+                    <tr>
+                      <td class="sportViewHeader" colspan="7"></td>
+                    </tr>
+                    <tr>
+                      <td class="sportItemEven" colspan="7">Keine Einträge gefunden!</td>
+                    </tr>
+                  </table>
+
+                </form>
+
+              </body>
+            </html>
+            """
+
+        actual = parse(html)
+        self.assertEqual(actual, [])
+
+    def test_parse_valid_ranking(self):
         actual = parse(HTML)
         self.assertEqual(actual, EXPECTED)
 
