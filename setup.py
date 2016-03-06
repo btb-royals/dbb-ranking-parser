@@ -33,4 +33,7 @@ setup(
     packages=['dbbrankingparser'],
     install_requires=['lxml>=3.4.0'],
     test_suite='tests',
+    entry_points={
+        'console_scripts': ['dbb-ranking=dbbrankingparser.cli:main'],
+    },
 )

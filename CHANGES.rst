@@ -9,6 +9,7 @@ not yet released
 
 - It is now sufficient to specify just the league ID instead of the full
   URL. The latter is still possible, though.
+- Added a command line script to retrieve a league's ranking as JSON.
 - Return nothing when parsing irrelevant HTML table rows.
 - Return extracted ranks as a generator instead of a list.
 - Split code over several modules.

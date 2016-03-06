@@ -66,6 +66,10 @@ For convenience, specifying only the league ID is sufficient; the URL
 will be assembled automatically. (Obviously, this might break when the
 URL structure changes on the DBB website.)
 
+
+Programmatically
+~~~~~~~~~~~~~~~~
+
 .. code:: python
 
     from dbbrankingparser import load_ranking_for_league
@@ -92,6 +96,19 @@ The URL can be specified explicitly, too:
 Note that a call to a ``load_ranking_*`` method returns a generator. To
 keep its elements around, and also to access them by index, they can be
 fed into a list (as shown above).
+
+
+On the Command Line
+~~~~~~~~~~~~~~~~~~~
+
+The package includes a command line script to retrieve a league's
+rankings non-programmatically, as JSON. It requires a league ID as its
+sole argument:
+
+.. code:: sh
+
+    $ dbb-ranking 12345
+    [{"name": "Team ACME", "rank": 1, …}]
 
 
 .. _DBB:                  http://www.basketball-bund.net/
