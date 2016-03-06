@@ -10,7 +10,7 @@ import unittest
 from dbbrankingparser import parse
 
 
-class RankingParserTest(unittest.TestCase):
+class DocumentParseTest(unittest.TestCase):
 
     def test_parse_empty_ranking(self):
         html = """\
