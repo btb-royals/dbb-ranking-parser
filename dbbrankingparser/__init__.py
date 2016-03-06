@@ -14,7 +14,15 @@ The resulting data is structured as a list of dictionaries.
 """
 
 from .document import parse
-from .http import fetch_content
+from .http import assemble_url, fetch_content
+
+
+def load_ranking_for_league(league_id):
+    """Fetch the HTML ranking for that league and yield ranks extracted
+    from it.
+    """
+    url = assemble_url(league_id)
+    return load_ranking_from_url(url)
 
 
 def load_ranking_from_url(url):

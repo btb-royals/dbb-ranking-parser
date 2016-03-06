@@ -59,6 +59,24 @@ Its target URL should look like this (assuming the league's ID is
 12345):
 ``http://www.basketball-bund.net/public/tabelle.jsp?print=1&viewDescKey=sport.dbb.views.TabellePublicView/index.jsp_&liga_id=12345``
 
+For convenience, specifying only the league ID is sufficient; the URL
+will be assembled automatically. (Obviously, this might break when the
+URL structure changes on the DBB website.)
+
+.. code:: python
+
+    from dbbrankingparser import load_ranking_for_league
+
+
+    league_id = 12345
+
+    ranking = load_ranking_for_league(league_id)
+
+    top_team = ranking[0]
+    print('Top team:', top_team['name'])
+
+The URL can be specified explicitly, too:
+
 .. code:: python
 
     from dbbrankingparser import load_ranking_from_url
@@ -67,9 +85,6 @@ Its target URL should look like this (assuming the league's ID is
     URL = '<see example above>'
 
     ranking = load_ranking_from_url(URL)
-
-    top_team = ranking[0]
-    print('Top team:', top_team['name'])
 
 
 .. _DBB:                  http://www.basketball-bund.net/
