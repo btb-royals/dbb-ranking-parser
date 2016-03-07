@@ -12,6 +12,7 @@ RUN apk add --no-cache \
         python3-dev \
         && \
     python3 -m ensurepip && \
+    pip3 install --upgrade pip && \
     pip3 install dbb-ranking-parser && \
     apk del .build-deps-lxml && \
     rm -rf /var/cache/apk/*
