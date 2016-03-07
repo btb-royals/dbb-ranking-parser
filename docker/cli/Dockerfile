@@ -1,6 +1,6 @@
 FROM alpine:3.3
 
-RUN apk add --update \
+RUN apk add \
         build-base \
         ca-certificates \
         libxml2 \
