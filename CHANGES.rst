@@ -7,6 +7,8 @@ Version 0.3
 
 not yet released
 
+- Added `Dockerfile` for the command line script.
+
 
 Version 0.2
 -----------

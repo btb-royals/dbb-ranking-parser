@@ -111,6 +111,37 @@ sole argument:
     [{"name": "Team ACME", "rank": 1, …}]
 
 
+Docker
+------
+
+The command line script can also be run from a Docker_ container.
+
+Building the container requires:
+
+- Docker_ being installed
+- a source copy of the `dbb-ranking-parser` package
+
+In the package path (as the 'root' user):
+
+.. code:: sh
+
+    # docker build -t dbb-ranking-parser-cli ./docker/cli
+
+This should build an image based upon `Alpine Linux`_ and that includes
+Python_ 3, lxml_ and the DBB Ranking Parser itself. It should be roughly
+75 MB in size.
+
+Running the container requires the league ID as the sole argument:
+
+.. code:: sh
+
+    # docker run --rm dbb-ranking-parser-cli 12345
+    [{"name": "Team ACME", "rank": 1, …}]
+
+The `--rm` option causes the container (but not the image) to be removed
+after it exits.
+
+
 .. _DBB:                  http://www.basketball-bund.net/
 .. _BTB Royals Oldenburg: https://www.btbroyals.de/
 .. _Python:               https://www.python.org/
@@ -119,6 +150,8 @@ sole argument:
 .. _libxml2:              http://xmlsoft.org/XSLT/
 .. _libxslt:              http://xmlsoft.org/XSLT/
 .. _Debian Linux:         https://www.debian.org/
+.. _Docker:               https://www.docker.com/
+.. _Alpine Linux:         http://alpinelinux.org/
 
 
 :Copyright: 2006-2016 Jochen Kupperschmidt
