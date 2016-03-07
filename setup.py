@@ -11,7 +11,7 @@ with codecs.open('README.rst', encoding='utf-8') as f:
 
 setup(
     name='dbb-ranking-parser',
-    version='0.2',
+    version='0.3-dev',
     description='Extract league rankings from the DBB (Deutscher Basketball Bund e.V.) website.',
     long_description=long_description,
     url='http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser',
