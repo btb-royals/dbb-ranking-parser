@@ -138,8 +138,8 @@ Running the container requires the league ID as the sole argument:
     # docker run --rm dbb-ranking-parser-cli 12345
     [{"name": "Team ACME", "rank": 1, …}]
 
-The `--rm` option causes the container (but not the image) to be removed
-after it exits.
+The ``--rm`` option causes the container (but not the image) to be
+removed after it exits.
 
 
 .. _DBB:                  http://www.basketball-bund.net/
