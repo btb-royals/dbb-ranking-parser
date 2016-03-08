@@ -7,7 +7,7 @@
 
 import unittest
 
-from dbbrankingparser.http import assemble_url
+from dbbrankingparser.httpclient import assemble_url
 
 
 class UrlAssemblyTest(unittest.TestCase):

@@ -11,7 +11,7 @@ Main entry point
 """
 
 from .document import parse
-from .http import assemble_url, fetch_content
+from .httpclient import assemble_url, fetch_content
 
 
 def load_ranking_for_league(league_id):

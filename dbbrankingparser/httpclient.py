@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 """
-dbbrankingparser.http
-~~~~~~~~~~~~~~~~~~~~~
+dbbrankingparser.httpclient
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-HTTP utilities
+HTTP client utilities
 
 :Copyright: 2006-2016 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
