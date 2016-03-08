@@ -7,6 +7,8 @@ Version 0.3
 
 not yet released
 
+- Added HTTP server that wraps the parser and responds with rankings as
+  JSON.
 - Added `Dockerfile` for the command line script.
 
 

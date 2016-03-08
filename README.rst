@@ -111,6 +111,30 @@ sole argument:
     [{"name": "Team ACME", "rank": 1, …}]
 
 
+Via HTTP
+~~~~~~~~
+
+Also included is an HTTP wrapper around the parser.
+
+To spin up the server:
+
+.. code:: sh
+
+    $ dbb-ranking-server
+    Listening for HTTP requests on localhost:8080 ...
+
+Since this is mostly meant to be used inside a Docker_ container, host
+and port are not (easily) configurable at this point.
+
+The server will attempt to look up a ranking for requests with an URL
+part of the form ``/<league id>``:
+
+.. code:: sh
+
+    $ curl http://localhost:8080/12345
+    [{"name": "Team ACME", "rank": 1, …}]
+
+
 Docker
 ------
 
