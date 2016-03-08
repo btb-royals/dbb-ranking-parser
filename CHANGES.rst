@@ -5,7 +5,7 @@ DBB Ranking Parser Changelog
 Version 0.3
 -----------
 
-not yet released
+Released March 8, 2016
 
 - Added HTTP server that wraps the parser and responds with rankings as
   JSON.
