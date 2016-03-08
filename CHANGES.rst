@@ -9,7 +9,7 @@ not yet released
 
 - Added HTTP server that wraps the parser and responds with rankings as
   JSON.
-- Added `Dockerfile` for the command line script.
+- Added `Dockerfile`s for the command line script and the HTTP server.
 
 
 Version 0.2

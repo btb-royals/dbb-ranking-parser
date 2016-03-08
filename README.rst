@@ -138,32 +138,48 @@ part of the form ``/<league id>``:
 Docker
 ------
 
-The command line script can also be run from a Docker_ container.
+The command line and HTTP server scripts can also be run in a Docker_
+container each.
 
-Building the container requires:
+Building the respective Docker_ images requires:
 
 - Docker_ being installed
 - a source copy of the `dbb-ranking-parser` package
 
 In the package path (as the 'root' user):
 
-.. code:: sh
+- to build an image for the command line script:
 
-    # docker build -t dbb-ranking-parser-cli ./docker/cli
+  .. code:: sh
 
-This should build an image based upon `Alpine Linux`_ and that includes
-Python_ 3, lxml_ and the DBB Ranking Parser itself. It should be roughly
-75 MB in size.
+      # docker build -t dbb-ranking-parser-cli ./docker/cli
 
-Running the container requires the league ID as the sole argument:
+- to build an HTTP server image:
+
+  .. code:: sh
+
+      # docker build -t dbb-ranking-parser-server ./docker/httpserver
+
+Each of these commands should build a Docker_ image based upon `Alpine
+Linux`_ and which includes Python_ 3, lxml_ and the DBB Ranking Parser
+itself. It should be roughly 75 MB in size.
+
+Running the command line script in a container requires the league ID as
+the sole argument:
 
 .. code:: sh
 
     # docker run --rm dbb-ranking-parser-cli 12345
     [{"name": "Team ACME", "rank": 1, …}]
 
-The ``--rm`` option causes the container (but not the image) to be
-removed after it exits.
+To spin up the HTTP server (requires no arguments):
+
+.. code:: sh
+
+    # docker run --rm dbb-ranking-parser-server
+
+The ``--rm`` option causes a container (but not the image) to be removed
+after it exits.
 
 
 .. _DBB:                  http://www.basketball-bund.net/
