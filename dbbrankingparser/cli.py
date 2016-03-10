@@ -17,15 +17,6 @@ import sys
 from .main import load_ranking_for_league
 
 
-def create_arg_parser():
-    """Prepare the command line arguments parser."""
-    parser = ArgumentParser()
-
-    parser.add_argument('league_id', type=int)
-
-    return parser
-
-
 def parse_args(args=None):
     """Parse command line arguments.
 
@@ -33,7 +24,9 @@ def parse_args(args=None):
     list of strings) to the argument parser instead of expecting them on
     the command line (i.e. `sys.argv`).
     """
-    parser = create_arg_parser()
+    parser = ArgumentParser()
+    parser.add_argument('league_id', type=int)
+
     return parser.parse_args(args)
 
 
