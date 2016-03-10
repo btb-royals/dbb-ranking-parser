@@ -36,7 +36,7 @@ setup(
     entry_points={
         'console_scripts': [
             'dbb-ranking = dbbrankingparser.cli:main',
-            'dbb-ranking-server = dbbrankingparser.httpserver:serve',
+            'dbb-ranking-server = dbbrankingparser.httpserver:main',
         ],
     },
 )

@@ -7,6 +7,9 @@ Version 0.3.1
 
 not yet released
 
+- Allowed to specify the HTTP server's host and port on the command
+  line.
+
 
 Version 0.3
 -----------
