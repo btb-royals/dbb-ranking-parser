@@ -5,7 +5,7 @@ DBB Ranking Parser Changelog
 Version 0.3.1
 -------------
 
-not yet released
+Released March 10, 2016
 
 - Allowed to specify the HTTP server's host and port on the command
   line.
