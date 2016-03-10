@@ -9,6 +9,8 @@ not yet released
 
 - Allowed to specify the HTTP server's host and port on the command
   line.
+- Fixed `Dockerfile` for the HTTP server to bind it to a public address
+  instead of localhost so that `EXPOSE`ing it actually works.
 
 
 Version 0.3
