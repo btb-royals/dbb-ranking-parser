@@ -182,16 +182,16 @@ The ``--rm`` option causes a container (but not the image) to be removed
 after it exits.
 
 
-.. _DBB:                  http://www.basketball-bund.net/
-.. _BTB Royals Oldenburg: https://www.btbroyals.de/
+.. _DBB:                  https://www.basketball-bund.net/
+.. _BTB Royals Oldenburg: http://www.btbroyals.de/
 .. _Python:               https://www.python.org/
 .. _pip:                  http://www.pip-installer.org/
-.. _lxml:                 http://lxml.de/
+.. _lxml:                 https://lxml.de/
 .. _libxml2:              http://xmlsoft.org/XSLT/
 .. _libxslt:              http://xmlsoft.org/XSLT/
 .. _Debian Linux:         https://www.debian.org/
 .. _Docker:               https://www.docker.com/
-.. _Alpine Linux:         http://alpinelinux.org/
+.. _Alpine Linux:         https://alpinelinux.org/
 
 
 :Copyright: 2006-2016 Jochen Kupperschmidt
