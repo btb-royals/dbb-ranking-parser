@@ -12,7 +12,7 @@ Oldenburg, Germany) where it has proven itself for many, many years.
 Requirements
 ------------
 
-- Python_ 3.4+
+- Python_ 3.5+
 - lxml_
 
 
@@ -35,7 +35,7 @@ distribution's repositories (as the 'root' user):
 .. code:: sh
 
     # aptitude update
-    # aptitude install python3.4-dev libxml2-dev libxslt1-dev
+    # aptitude install python3.5-dev libxml2-dev libxslt1-dev
 
 Apart from that (for example, if those packages are not yet installed)
 it might be easier to install Debian's pre-built binary packages for

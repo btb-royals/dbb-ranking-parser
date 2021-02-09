@@ -25,13 +25,12 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Other/Nonlisted Topic',
     ],
     packages=['dbbrankingparser'],
-    install_requires=['lxml>=3.4.0'],
+    install_requires=['lxml>=4.6.2'],
     test_suite='tests',
     entry_points={
         'console_scripts': [

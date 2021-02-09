@@ -2,6 +2,15 @@ DBB Ranking Parser Changelog
 ============================
 
 
+Version 0.4
+-------------
+
+Unreleased
+
+- Dropped support for Python 3.4.
+- Updated lxml to at least version 4.6.2.
+
+
 Version 0.3.1
 -------------
 
