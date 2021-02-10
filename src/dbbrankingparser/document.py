@@ -25,7 +25,8 @@ def select_rank_rows(html: str) -> List[HtmlElement]:
     """Return the table rows that are expected to contain rank data."""
     root = document_fromstring(html)
     return root.xpath(
-        'body/form/table[@class="sportView"][2]/tr[position() > 1]')
+        'body/form/table[@class="sportView"][2]/tr[position() > 1]'
+    )
 
 
 def parse_rank_rows(trs: List[HtmlElement]) -> Iterator[Dict[str, Any]]:
@@ -56,7 +57,8 @@ def has_team_withdrawn(tr: HtmlElement) -> bool:
 
 def get_rank_values(tr: HtmlElement, team_has_withdrawn: bool) -> List[str]:
     """Return that row's cell values."""
-    xpath_expression = 'td/nobr/strike/text()' if team_has_withdrawn \
-                       else 'td/nobr/text()'
+    xpath_expression = (
+        'td/nobr/strike/text()' if team_has_withdrawn else 'td/nobr/text()'
+    )
 
     return tr.xpath(xpath_expression)

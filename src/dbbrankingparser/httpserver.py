@@ -68,14 +68,18 @@ def parse_args(args=None):
     """Parse command line arguments."""
     parser = ArgumentParser()
 
-    parser.add_argument('--host',
+    parser.add_argument(
+        '--host',
         default=DEFAULT_HOST,
-        help='the host to listen on [default: {}]'.format(DEFAULT_HOST))
+        help='the host to listen on [default: {}]'.format(DEFAULT_HOST),
+    )
 
-    parser.add_argument('--port',
+    parser.add_argument(
+        '--port',
         type=int,
         default=DEFAULT_PORT,
-        help='the port to listen on [default: {:d}]'.format(DEFAULT_PORT))
+        help='the port to listen on [default: {:d}]'.format(DEFAULT_PORT),
+    )
 
     return parser.parse_args(args)
 
