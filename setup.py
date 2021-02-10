@@ -1,43 +1,5 @@
-import codecs
-
-from setuptools import setup
+import setuptools
 
 
-with codecs.open('README.rst', encoding='utf-8') as f:
-    long_description = f.read()
-
-
-setup(
-    name='dbb-ranking-parser',
-    version='0.4-dev',
-    description='Extract league rankings from the DBB (Deutscher Basketball Bund e.V.) website.',
-    long_description=long_description,
-    url='http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser',
-    author='Jochen Kupperschmidt',
-    author_email='homework@nwsnet.de',
-    license='MIT',
-    classifiers=[
-        'Development Status :: 4 - Beta',
-        'Intended Audience :: Other Audience',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Other/Nonlisted Topic',
-    ],
-    packages=['dbbrankingparser'],
-    install_requires=['lxml>=4.6.2'],
-    test_suite='tests',
-    entry_points={
-        'console_scripts': [
-            'dbb-ranking = dbbrankingparser.cli:main',
-            'dbb-ranking-server = dbbrankingparser.httpserver:main',
-        ],
-    },
-)
+if __name__ == '__main__':
+    setuptools.setup()
