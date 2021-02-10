@@ -12,6 +12,7 @@ from argparse import ArgumentParser
 import json
 import sys
 
+from . import VERSION
 from .main import load_ranking_for_league
 
 
@@ -23,6 +24,9 @@ def parse_args(args=None):
     the command line (i.e. `sys.argv`).
     """
     parser = ArgumentParser()
+    parser.add_argument(
+        '--version', action='version', version=f'DBB Ranking Parser {VERSION}'
+    )
     parser.add_argument('league_id', type=int)
 
     return parser.parse_args(args)
