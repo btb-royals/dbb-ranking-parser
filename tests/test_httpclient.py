@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 :Copyright: 2006-2021 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
