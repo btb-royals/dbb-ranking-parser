@@ -12,7 +12,7 @@ The resulting data is structured as a list of dictionaries.
 Please note that rankings are usually only available for the current
 season, but not those of the past.
 
-:Copyright: 2006-2016 Jochen Kupperschmidt
+:Copyright: 2006-2021 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
 """
 

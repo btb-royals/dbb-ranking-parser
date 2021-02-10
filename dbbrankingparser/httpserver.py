@@ -10,7 +10,7 @@ JSON.
 Expected request URL path: `/<league id>`, e.g. `/12345`. Raises 404 on
 invalid league id.
 
-:Copyright: 2006-2016 Jochen Kupperschmidt
+:Copyright: 2006-2021 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
 """
 
