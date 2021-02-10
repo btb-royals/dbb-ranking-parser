@@ -20,7 +20,7 @@ USER_AGENT = (
 def assemble_url(league_id: int) -> str:
     """Assemble the ranking HTML's URL for the league with that ID."""
     template = (
-        'http://www.basketball-bund.net/public/tabelle.jsp'
+        'https://www.basketball-bund.net/public/tabelle.jsp'
         '?print=1'
         '&viewDescKey=sport.dbb.views.TabellePublicView/index.jsp_'
         '&liga_id={:d}'
