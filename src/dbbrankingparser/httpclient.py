@@ -31,11 +31,11 @@ def assemble_url(league_id: int) -> str:
 
 def fetch_content(url: str) -> str:
     """Retrieve and return the content of that URL."""
-    request = create_request(url)
+    request = _create_request(url)
     return urlopen(request).read().decode('utf-8')
 
 
-def create_request(url: str) -> Request:
+def _create_request(url: str) -> Request:
     """Create an HTTP GET request."""
     headers = {'User-Agent': USER_AGENT}
     return Request(url, headers=headers)

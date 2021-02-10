@@ -17,11 +17,11 @@ from .conversion import convert_attributes
 
 def parse(html: str) -> List[Dict[str, Any]]:
     """Yield ranks extracted from HTML document."""
-    trs = select_rank_rows(html)
-    return list(parse_rank_rows(trs))
+    trs = _select_rank_rows(html)
+    return list(_parse_rank_rows(trs))
 
 
-def select_rank_rows(html: str) -> List[HtmlElement]:
+def _select_rank_rows(html: str) -> List[HtmlElement]:
     """Return the table rows that are expected to contain rank data."""
     root = document_fromstring(html)
     return root.xpath(
@@ -29,19 +29,19 @@ def select_rank_rows(html: str) -> List[HtmlElement]:
     )
 
 
-def parse_rank_rows(trs: List[HtmlElement]) -> Iterator[Dict[str, Any]]:
+def _parse_rank_rows(trs: List[HtmlElement]) -> Iterator[Dict[str, Any]]:
     """Yield ranks extracted from table rows."""
     for tr in trs:
-        rank = parse_rank_row(tr)
+        rank = _parse_rank_row(tr)
         if rank:
             yield rank
 
 
-def parse_rank_row(tr: HtmlElement) -> Optional[Dict[str, Any]]:
+def _parse_rank_row(tr: HtmlElement) -> Optional[Dict[str, Any]]:
     """Attempt to extract a single rank's properties from a table row."""
-    team_has_withdrawn = has_team_withdrawn(tr)
+    team_has_withdrawn = _has_team_withdrawn(tr)
 
-    values = get_rank_values(tr, team_has_withdrawn)
+    values = _get_rank_values(tr, team_has_withdrawn)
     if not values:
         return None
 
@@ -50,12 +50,12 @@ def parse_rank_row(tr: HtmlElement) -> Optional[Dict[str, Any]]:
     return attributes
 
 
-def has_team_withdrawn(tr: HtmlElement) -> bool:
+def _has_team_withdrawn(tr: HtmlElement) -> bool:
     """Return `True` if the markup indicates that the team has withdrawn."""
     return bool(tr.xpath('td[2]/nobr/strike'))
 
 
-def get_rank_values(tr: HtmlElement, team_has_withdrawn: bool) -> List[str]:
+def _get_rank_values(tr: HtmlElement, team_has_withdrawn: bool) -> List[str]:
     """Return that row's cell values."""
     xpath_expression = (
         'td/nobr/strike/text()' if team_has_withdrawn else 'td/nobr/text()'
