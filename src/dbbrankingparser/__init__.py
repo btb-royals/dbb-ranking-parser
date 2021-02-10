@@ -17,4 +17,4 @@ season, but not those of the past.
 from .main import load_ranking_for_league, load_ranking_from_url
 
 
-VERSION: str = '0.4-dev'
+VERSION = '0.4-dev'
