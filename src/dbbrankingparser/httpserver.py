@@ -21,8 +21,8 @@ from urllib.parse import urlsplit
 from .main import load_ranking_for_league
 
 
-DEFAULT_HOST = '127.0.0.1'  # type: str
-DEFAULT_PORT = 8080  # type: int
+DEFAULT_HOST: str = '127.0.0.1'
+DEFAULT_PORT: int = 8080
 
 
 class RequestHandler(BaseHTTPRequestHandler):

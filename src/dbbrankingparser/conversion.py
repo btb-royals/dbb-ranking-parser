@@ -22,7 +22,7 @@ def intpair(value: str, separator: str) -> Tuple[int, int]:
     return cast(Tuple[int, int], pair)
 
 
-ATTRIBUTES = [
+ATTRIBUTES: List[Tuple[str, Callable[[str], Any]]] = [
     ('rank', int),
     ('name', str),
     ('games', int),
@@ -30,7 +30,7 @@ ATTRIBUTES = [
     ('points', int),
     ('baskets', intpair_factory(':')),
     ('difference', int),
-]  # type: List[Tuple[str, Callable[[str], Any]]]
+]
 
 
 def convert_attributes(values: Iterable[str]) -> Dict[str, Any]:
