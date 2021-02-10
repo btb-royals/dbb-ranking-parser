@@ -12,6 +12,7 @@ Unreleased
 - Updated lxml to at least version 4.6.2.
 - Moved package metadata from ``setup.py`` to ``setup.cfg``.
 - Switched to a ``src/`` project layout.
+- Added type hints (PEP 484).
 
 
 Version 0.3.1

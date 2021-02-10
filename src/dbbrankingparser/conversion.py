@@ -10,14 +10,16 @@ appropriate type.
 """
 
 from functools import partial
+from typing import Any, Callable, cast, Dict, Iterable, List, Tuple
 
 
-def intpair_factory(separator):
+def intpair_factory(separator: str) -> Callable[[str], Tuple[int, int]]:
     return partial(intpair, separator=separator)
 
 
-def intpair(value, separator):
-    return tuple(map(int, value.split(separator, 1)))
+def intpair(value: str, separator: str) -> Tuple[int, int]:
+    pair = tuple(map(int, value.split(separator, maxsplit=1)))
+    return cast(Tuple[int, int], pair)
 
 
 ATTRIBUTES = [
@@ -28,10 +30,10 @@ ATTRIBUTES = [
     ('points', int),
     ('baskets', intpair_factory(':')),
     ('difference', int),
-]
+]  # type: List[Tuple[str, Callable[[str], Any]]]
 
 
-def convert_attributes(values):
+def convert_attributes(values: Iterable[str]) -> Dict[str, Any]:
     """Type-convert and name rank attribute values."""
     return {name: converter(value)
             for (name, converter), value

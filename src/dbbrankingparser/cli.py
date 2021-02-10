@@ -28,7 +28,7 @@ def parse_args(args=None):
     return parser.parse_args(args)
 
 
-def main(*, args=None, fp=sys.stdout, faked_result=None):
+def main(*, args=None, fp=sys.stdout, faked_result=None) -> None:
     """Require a league ID on the command line and write the
     corresponding ranking as JSON to STDOUT.
     """

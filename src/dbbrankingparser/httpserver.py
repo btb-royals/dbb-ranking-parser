@@ -15,18 +15,19 @@ invalid league id.
 from argparse import ArgumentParser
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
+from typing import Optional
 from urllib.parse import urlsplit
 
 from .main import load_ranking_for_league
 
 
-DEFAULT_HOST = '127.0.0.1'
-DEFAULT_PORT = 8080
+DEFAULT_HOST = '127.0.0.1'  # type: str
+DEFAULT_PORT = 8080  # type: int
 
 
 class RequestHandler(BaseHTTPRequestHandler):
 
-    def do_GET(self):
+    def do_GET(self) -> None:
         league_id = self.extract_league_id_from_path()
 
         if league_id is None:
@@ -42,10 +43,10 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(ranking_json)
 
-    def version_string(self):
+    def version_string(self) -> str:
         return 'DBB Ranking Parser'
 
-    def extract_league_id_from_path(self):
+    def extract_league_id_from_path(self) -> Optional[int]:
         value = urlsplit(self.path).path.lstrip('/')
 
         try:
@@ -54,7 +55,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             return None
 
 
-def serve(host, port):
+def serve(host: str, port: int) -> None:
     """Serve HTTP requests."""
     address = (host, port)
 
