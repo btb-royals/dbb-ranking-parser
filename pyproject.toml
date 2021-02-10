@@ -9,3 +9,7 @@ build-backend = "setuptools.build_meta"
 line-length = 80
 skip-string-normalization = true
 target-version = ['py36']
+
+[tool.pytest.ini_options]
+addopts = "-vv"
+testpaths = ["tests"]

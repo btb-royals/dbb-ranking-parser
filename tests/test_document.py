@@ -3,44 +3,43 @@
 :License: MIT, see LICENSE for details.
 """
 
-import unittest
+import pytest
 
 from dbbrankingparser.document import parse
 
 
-class DocumentParseTest(unittest.TestCase):
+def test_parse_empty_ranking():
+    html = """\
+        <html>
+          <body>
 
-    def test_parse_empty_ranking(self):
-        html = """\
-            <html>
-              <body>
+            <form>
 
-                <form>
+              <table class="sportView">
+              </table>
 
-                  <table class="sportView">
-                  </table>
+              <table class="sportView">
+                <tr>
+                  <td class="sportViewHeader" colspan="7"></td>
+                </tr>
+                <tr>
+                  <td class="sportItemEven" colspan="7">Keine Einträge gefunden!</td>
+                </tr>
+              </table>
 
-                  <table class="sportView">
-                    <tr>
-                      <td class="sportViewHeader" colspan="7"></td>
-                    </tr>
-                    <tr>
-                      <td class="sportItemEven" colspan="7">Keine Einträge gefunden!</td>
-                    </tr>
-                  </table>
+            </form>
 
-                </form>
+          </body>
+        </html>
+        """
 
-              </body>
-            </html>
-            """
+    actual = parse(html)
+    assert list(actual) == []
 
-        actual = parse(html)
-        self.assertEqual(list(actual), [])
 
-    def test_parse_valid_ranking(self):
-        actual = parse(HTML)
-        self.assertEqual(list(actual), EXPECTED)
+def test_parse_valid_ranking():
+    actual = parse(HTML)
+    assert list(actual) == EXPECTED
 
 
 EXPECTED = [

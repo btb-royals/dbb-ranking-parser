@@ -3,33 +3,34 @@
 :License: MIT, see LICENSE for details.
 """
 
-import unittest
+import pytest
 
 from dbbrankingparser.httpserver import parse_args
 
 
-class ParseArgsTest(unittest.TestCase):
+def test_defaults():
+    actual = parse_args([])
 
-    def test_defaults(self):
-        actual = parse_args([])
+    assert actual.host == '127.0.0.1'
+    assert actual.port == 8080
 
-        self.assertEqual(actual.host, '127.0.0.1')
-        self.assertEqual(actual.port, 8080)
 
-    def test_custom_host(self):
-        actual = parse_args(['--host', '0.0.0.0'])
+def test_custom_host():
+    actual = parse_args(['--host', '0.0.0.0'])
 
-        self.assertEqual(actual.host, '0.0.0.0')
-        self.assertEqual(actual.port, 8080)
+    assert actual.host == '0.0.0.0'
+    assert actual.port == 8080
 
-    def test_custom_port(self):
-        actual = parse_args(['--port', '80'])
 
-        self.assertEqual(actual.host, '127.0.0.1')
-        self.assertEqual(actual.port, 80)
+def test_custom_port():
+    actual = parse_args(['--port', '80'])
 
-    def test_custom_host_and_port(self):
-        actual = parse_args(['--host', '10.10.4.22', '--port', '8092'])
+    assert actual.host == '127.0.0.1'
+    assert actual.port == 80
 
-        self.assertEqual(actual.host, '10.10.4.22')
-        self.assertEqual(actual.port, 8092)
+
+def test_custom_host_and_port():
+    actual = parse_args(['--host', '10.10.4.22', '--port', '8092'])
+
+    assert actual.host == '10.10.4.22'
+    assert actual.port == 8092

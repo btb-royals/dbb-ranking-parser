@@ -13,6 +13,7 @@ Unreleased
 - Moved package metadata from ``setup.py`` to ``setup.cfg``.
 - Switched to a ``src/`` project layout.
 - Added type hints (PEP 484).
+- Ported tests from ``unittest`` to pytest.
 
 
 Version 0.3.1
