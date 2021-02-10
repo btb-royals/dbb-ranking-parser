@@ -8,7 +8,7 @@ Version 0.4
 Unreleased
 
 - Added support for Python 3.6, 3.7, 3.8, and 3.9.
-- Dropped support for Python 3.4.
+- Dropped support for Python 3.4 and 3.5 (which are end-of-life).
 - Updated lxml to at least version 4.6.2.
 - Moved package metadata from ``setup.py`` to ``setup.cfg``.
 - Switched to a ``src/`` project layout.
