@@ -5,7 +5,7 @@ DBB Ranking Parser Changelog
 Version 0.4.1
 -------------
 
-Unreleased
+Released on February 13, 2021
 
 - Fixed reStructuredText issues in changelog which prevented a release
   on PyPI.
