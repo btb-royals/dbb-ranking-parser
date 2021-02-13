@@ -12,17 +12,12 @@ invalid league id.
 :License: MIT, see LICENSE for details.
 """
 
-from argparse import ArgumentParser
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 from typing import Optional
 from urllib.parse import urlsplit
 
 from .main import load_ranking_for_league
-
-
-DEFAULT_HOST: str = '127.0.0.1'
-DEFAULT_PORT: int = 8080
 
 
 class RequestHandler(BaseHTTPRequestHandler):
@@ -62,30 +57,3 @@ def serve(host: str, port: int) -> None:
     server = HTTPServer(address, RequestHandler)
     print('Listening for HTTP requests on {}:{:d} ...'.format(*address))
     server.serve_forever()
-
-
-def parse_args(args=None):
-    """Parse command line arguments."""
-    parser = ArgumentParser()
-
-    parser.add_argument(
-        '--host',
-        default=DEFAULT_HOST,
-        help='the host to listen on [default: {}]'.format(DEFAULT_HOST),
-    )
-
-    parser.add_argument(
-        '--port',
-        type=int,
-        default=DEFAULT_PORT,
-        help='the port to listen on [default: {:d}]'.format(DEFAULT_PORT),
-    )
-
-    return parser.parse_args(args)
-
-
-def main():
-    """Command line entry point"""
-    args = parse_args()
-
-    serve(args.host, args.port)

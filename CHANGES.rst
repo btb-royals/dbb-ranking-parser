@@ -14,6 +14,9 @@ Unreleased
 - Switched to a ``src/`` project layout.
 - Added type hints (PEP 484).
 - Ported tests from ``unittest`` to pytest.
+- Merged basic and HTTP server command line interfaces into a single
+  argument parser with subcommands ``get`` and ``serve``. Removed
+  ``dbb-ranking-server`` entrypoint.
 - Added command line option ``--version`` to show the application's
   version.
 

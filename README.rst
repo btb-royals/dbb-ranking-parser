@@ -107,7 +107,7 @@ sole argument:
 
 .. code:: sh
 
-    $ dbb-ranking 12345
+    $ dbb-ranking get 12345
     [{"name": "Team ACME", "rank": 1, …}]
 
 
@@ -120,11 +120,8 @@ To spin up the server:
 
 .. code:: sh
 
-    $ dbb-ranking-server
-    Listening for HTTP requests on localhost:8080 ...
-
-Since this is mostly meant to be used inside a Docker_ container, host
-and port are not (easily) configurable at this point.
+    $ dbb-ranking serve
+    Listening for HTTP requests on 127.0.0.1:8080 ...
 
 The server will attempt to look up a ranking for requests with an URL
 part of the form ``/<league id>``:

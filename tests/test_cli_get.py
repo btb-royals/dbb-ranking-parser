@@ -10,24 +10,24 @@ import pytest
 from dbbrankingparser.cli import main
 
 
-def test_main_without_args_fails():
-    args = []
+def test_get_without_args_fails():
+    args = ['get']
 
     with pytest.raises(SystemExit):
-        run_main(args)
+        run_get(args)
 
 
-def test_main_with_non_integer_league_id_fails():
-    args = ['foo']
+def test_get_with_non_integer_league_id_fails():
+    args = ['get', 'foo']
 
     with pytest.raises(SystemExit):
-        run_main(args)
+        run_get(args)
 
 
-def test_main_with_valid_league_id_succeeds():
-    args = ['12345']
+def test_get_with_valid_league_id_succeeds():
+    args = ['get', '12345']
 
-    output = run_main(args)
+    output = run_get(args)
 
     assert output == '[{"rank": 1}]'
 
@@ -35,7 +35,7 @@ def test_main_with_valid_league_id_succeeds():
 # helpers
 
 
-def run_main(args):
+def run_get(args):
     fp = StringIO()
     faked_result = [{'rank': 1}]
 
