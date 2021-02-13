@@ -148,7 +148,7 @@ In the package path:
 
 .. code:: sh
 
-    # docker build -t dbb-ranking-parser .
+    $ docker build -t dbb-ranking-parser .
 
 This should build a Docker_ image based upon `Alpine Linux`_ and which
 includes Python_ 3, lxml_ and the DBB Ranking Parser itself. It should
@@ -161,14 +161,14 @@ To fetch a single ranking:
 
 .. code:: sh
 
-    # docker run --rm dbb-ranking-parser get 12345
+    $ docker run --rm dbb-ranking-parser get 12345
     [{"name": "Team ACME", "rank": 1, …}]
 
 To spin up the HTTP server on port 8080 of the host machine:
 
 .. code:: sh
 
-    # docker run -p 8080:8080 --rm dbb-ranking-parser serve
+    $ docker run -p 8080:8080 --rm dbb-ranking-parser serve
 
 The ``--rm`` option causes a container (but not the image) to be removed
 after it exits.
