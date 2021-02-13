@@ -188,5 +188,4 @@ after it exits.
 
 :Copyright: 2006-2021 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
-:Version: 0.4-dev
 :Website: http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
