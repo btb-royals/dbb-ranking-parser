@@ -1,6 +1,6 @@
 include CHANGES.rst
+include Dockerfile
 include LICENSE
 include README.rst
-graft docker
 recursive-include tests *.py
 global-exclude *.pyc

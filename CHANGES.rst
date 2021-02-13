@@ -19,6 +19,7 @@ Unreleased
   ``dbb-ranking-server`` entrypoint.
 - Added command line option ``--version`` to show the application's
   version.
+- Merged the previous three ``Dockerfile`` files into a single one.
 
 
 Version 0.3.1

@@ -16,3 +16,8 @@ RUN apk add --no-cache \
     pip3 install dbb-ranking-parser && \
     apk del .build-deps-lxml && \
     rm -rf /var/cache/apk/*
+
+# Only relevant for HTTP server mode.
+EXPOSE 8080
+
+ENTRYPOINT ["dbb-ranking"]

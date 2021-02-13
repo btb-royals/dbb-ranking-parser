@@ -135,45 +135,40 @@ part of the form ``/<league id>``:
 Docker
 ------
 
-The command line and HTTP server scripts can also be run in a Docker_
-container each.
+DBB Ranking Parser can also be run in a Docker_ container. This avoids
+the local creation of a virtual environment and the installation of the
+packages, or be useful in a deployment where containers are used.
 
-Building the respective Docker_ images requires:
+Building a Docker_ image requires:
 
 - Docker_ being installed
 - a source copy of the `dbb-ranking-parser` package
 
-In the package path (as the 'root' user):
-
-- to build an image for the command line script:
-
-  .. code:: sh
-
-      # docker build -t dbb-ranking-parser-cli ./docker/cli
-
-- to build an HTTP server image:
-
-  .. code:: sh
-
-      # docker build -t dbb-ranking-parser-server ./docker/httpserver
-
-Each of these commands should build a Docker_ image based upon `Alpine
-Linux`_ and which includes Python_ 3, lxml_ and the DBB Ranking Parser
-itself. It should be roughly 75 MB in size.
-
-Running the command line script in a container requires the league ID as
-the sole argument:
+In the package path:
 
 .. code:: sh
 
-    # docker run --rm dbb-ranking-parser-cli 12345
+    # docker build -t dbb-ranking-parser .
+
+This should build a Docker_ image based upon `Alpine Linux`_ and which
+includes Python_ 3, lxml_ and the DBB Ranking Parser itself. It should
+be roughly 75 MB in size.
+
+Running the Docker container accepts the same arguments as the command
+line script.
+
+To fetch a single ranking:
+
+.. code:: sh
+
+    # docker run --rm dbb-ranking-parser get 12345
     [{"name": "Team ACME", "rank": 1, …}]
 
-To spin up the HTTP server on port 8080:
+To spin up the HTTP server on port 8080 of the host machine:
 
 .. code:: sh
 
-    # docker run -p 8080:8080 --rm dbb-ranking-parser-server
+    # docker run -p 8080:8080 --rm dbb-ranking-parser serve
 
 The ``--rm`` option causes a container (but not the image) to be removed
 after it exits.
