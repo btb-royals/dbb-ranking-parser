@@ -17,6 +17,7 @@ Unreleased
 - Merged basic and HTTP server command line interfaces into a single
   argument parser with subcommands ``get`` and ``serve``. Removed
   ``dbb-ranking-server`` entrypoint.
+- Renamed command line entrypoint to ``dbb-ranking-parser``.
 - Added command line option ``--version`` to show the application's
   version.
 - Merged the previous three ``Dockerfile`` files into a single one.

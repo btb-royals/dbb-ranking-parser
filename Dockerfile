@@ -14,4 +14,4 @@ RUN apk add --no-cache \
 # Only relevant for HTTP server mode.
 EXPOSE 8080
 
-ENTRYPOINT ["dbb-ranking"]
+ENTRYPOINT ["dbb-ranking-parser"]

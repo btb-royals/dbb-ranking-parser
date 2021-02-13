@@ -107,7 +107,7 @@ sole argument:
 
 .. code:: sh
 
-    $ dbb-ranking get 12345
+    $ dbb-ranking-parser get 12345
     [{"name": "Team ACME", "rank": 1, …}]
 
 
@@ -120,7 +120,7 @@ To spin up the server:
 
 .. code:: sh
 
-    $ dbb-ranking serve
+    $ dbb-ranking-parser serve
     Listening for HTTP requests on 127.0.0.1:8080 ...
 
 The server will attempt to look up a ranking for requests with an URL
