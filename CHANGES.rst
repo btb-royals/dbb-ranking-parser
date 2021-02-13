@@ -20,6 +20,9 @@ Unreleased
 - Added command line option ``--version`` to show the application's
   version.
 - Merged the previous three ``Dockerfile`` files into a single one.
+- Updated and simplified Docker image and build process by upgrading
+  Alpine Linux to 3.13 and installing lxml as a binary package,
+  removing the need for local compilation.
 
 
 Version 0.3.1

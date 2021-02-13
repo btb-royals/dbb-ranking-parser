@@ -152,7 +152,7 @@ In the package path:
 
 This should build a Docker_ image based upon `Alpine Linux`_ and which
 includes Python_ 3, lxml_ and the DBB Ranking Parser itself. It should
-be roughly 75 MB in size.
+be roughly 70 MB in size.
 
 Running the Docker container accepts the same arguments as the command
 line script.
