@@ -3,9 +3,9 @@ DBB Ranking Parser Changelog
 
 
 Version 0.4
--------------
+-----------
 
-Unreleased
+Released on February 13, 2021
 
 - Added support for Python 3.6, 3.7, 3.8, and 3.9.
 - Dropped support for Python 3.4 and 3.5 (which are end-of-life).
