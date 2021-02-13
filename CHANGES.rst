@@ -7,6 +7,9 @@ Version 0.4.1
 
 Unreleased
 
+- Fixed reStructuredText issues in changelog which prevented a release
+  on PyPI.
+
 
 Version 0.4
 -----------
@@ -39,8 +42,8 @@ Released March 10, 2016
 
 - Allowed to specify the HTTP server's host and port on the command
   line.
-- Fixed `Dockerfile` for the HTTP server to bind it to a public address
-  instead of localhost so that `EXPOSE`ing it actually works.
+- Fixed ``Dockerfile`` for the HTTP server to bind it to a public address
+  instead of localhost so that exposing the port actually works.
 
 
 Version 0.3
@@ -50,7 +53,8 @@ Released March 8, 2016
 
 - Added HTTP server that wraps the parser and responds with rankings as
   JSON.
-- Added `Dockerfile`s for the command line script and the HTTP server.
+- Added ``Dockerfile`` files for the command line script and the HTTP
+  server.
 
 
 Version 0.2
