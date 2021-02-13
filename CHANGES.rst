@@ -7,6 +7,8 @@ Version 0.4.2
 
 Unreleased
 
+- Fixed description of how to run the HTTP server in a Docker container.
+
 
 Version 0.4.1
 -------------

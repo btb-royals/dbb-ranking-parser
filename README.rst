@@ -164,11 +164,11 @@ To fetch a single ranking:
     $ docker run --rm dbb-ranking-parser get 12345
     [{"name": "Team ACME", "rank": 1, …}]
 
-To spin up the HTTP server on port 8080 of the host machine:
+To spin up the HTTP server on port 7000 of the host machine:
 
 .. code:: sh
 
-    $ docker run -p 8080:8080 --rm dbb-ranking-parser serve
+    $ docker run -p 7000:8080 --rm dbb-ranking-parser serve --host 0.0.0.0 --port 8080
 
 The ``--rm`` option causes a container (but not the image) to be removed
 after it exits.
