@@ -5,7 +5,7 @@ DBB Ranking Parser Changelog
 Version 0.4.2
 -------------
 
-Unreleased
+Released on February 20, 2021
 
 - Fixed description of how to run the HTTP server in a Docker container.
 
