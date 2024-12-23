@@ -7,6 +7,8 @@ DBB Ranking Parser Changelog
 
 - Dropped support for Python 3.6, 3.7, and 3.8 (which are end-of-life).
 - Updated lxml to at least version 5.3.0.
+- Moved remaining project metadata from ``setup.cfg`` to
+  ``pyproject.toml``.
 - Switched code formatter from Black to Ruff.
 
 

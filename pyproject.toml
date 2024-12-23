@@ -1,3 +1,35 @@
+[project]
+name = "dbb-ranking-parser"
+version = "0.5.0-dev"
+description = "Extract league rankings from the DBB (Deutscher Basketball Bund e.V.) website."
+readme = "README.rst"
+authors = [
+    { name = "Jochen Kupperschmidt", email = "homework@nwsnet.de" }
+]
+license = { text = "MIT" }
+keywords = [ "basketball", "rankings", "scrape" ]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Other Audience",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Other/Nonlisted Topic",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "lxml>=5.3.0",
+]
+
+[project.scripts]
+dbb-ranking-parser = "dbbrankingparser.cli:main"
+
+[project.urls]
+Website = "http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser"
+
 [build-system]
 requires = [
     "setuptools >= 51.1.2",
