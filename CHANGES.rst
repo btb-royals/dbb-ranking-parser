@@ -17,6 +17,7 @@ DBB Ranking Parser Changelog
 - Changed ``Dockerfile`` to install lxml as a Python wheel rather than
   as an Alpine package.
 - Introduced virtual environment to Docker container.
+- Added GitHub action to build and publish Docker images.
 - Switched build backend from setuptools to Hatchling.
 - Switched code formatter from Black to Ruff.
 
