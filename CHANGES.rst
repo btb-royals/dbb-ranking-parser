@@ -2,6 +2,10 @@ DBB Ranking Parser Changelog
 ============================
 
 
+Version 0.5.0 (unreleased)
+--------------------------
+
+
 Version 0.4.2
 -------------
 
