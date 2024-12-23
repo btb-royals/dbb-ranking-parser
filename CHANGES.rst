@@ -12,6 +12,7 @@ DBB Ranking Parser Changelog
   ``pyproject.toml``.
 - Added uv lock file (``uv.lock``) to pin versions of direct and
   transitive dependencies.
+- Updated Docker base image to Alpine Linux 3.18.
 - Switched build backend from setuptools to Hatchling.
 - Switched code formatter from Black to Ruff.
 
