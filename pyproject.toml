@@ -1,6 +1,6 @@
 [project]
 name = "dbb-ranking-parser"
-version = "0.5.0-dev"
+version = "0.5.0"
 description = "Extract league rankings from the DBB (Deutscher Basketball Bund e.V.) website."
 readme = "README.rst"
 authors = [

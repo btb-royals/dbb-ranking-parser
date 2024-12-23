@@ -9,7 +9,7 @@ RUN apk add --no-cache python3 && \
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN python3 -m ensurepip && \
-    pip3 install --no-cache-dir 'dbb-ranking-parser==0.5.0-dev'
+    pip3 install --no-cache-dir 'dbb-ranking-parser==0.5.0'
 
 # Only relevant for HTTP server mode.
 EXPOSE 8080
