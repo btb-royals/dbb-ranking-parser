@@ -7,8 +7,8 @@ RUN apk add --no-cache \
         py3-lxml \
         && \
     python3 -m ensurepip && \
-    pip3 install --upgrade pip && \
-    pip3 install 'dbb-ranking-parser==0.5.0-dev' && \
+    pip3 install --no-cache-dir --upgrade pip && \
+    pip3 install --no-cache-dir 'dbb-ranking-parser==0.5.0-dev' && \
     rm -rf /var/cache/apk/*
 
 # Only relevant for HTTP server mode.
