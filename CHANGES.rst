@@ -13,6 +13,8 @@ DBB Ranking Parser Changelog
 - Added uv lock file (``uv.lock``) to pin versions of direct and
   transitive dependencies.
 - Updated Docker base image to Alpine Linux 3.18.
+- Changed ``Dockerfile`` to install lxml as a Python wheel rather than
+  as an Alpine package.
 - Switched build backend from setuptools to Hatchling.
 - Switched code formatter from Black to Ruff.
 
