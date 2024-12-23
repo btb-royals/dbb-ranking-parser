@@ -15,6 +15,7 @@ DBB Ranking Parser Changelog
 - Updated Docker base image to Alpine Linux 3.18.
 - Changed ``Dockerfile`` to install lxml as a Python wheel rather than
   as an Alpine package.
+- Introduced virtual environment to Docker container.
 - Switched build backend from setuptools to Hatchling.
 - Switched code formatter from Black to Ruff.
 
