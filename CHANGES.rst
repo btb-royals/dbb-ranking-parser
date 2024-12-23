@@ -12,7 +12,7 @@ DBB Ranking Parser Changelog
   ``pyproject.toml``.
 - Added uv lock file (``uv.lock``) to pin versions of direct and
   transitive dependencies.
-- Updated Docker base image to Alpine Linux 3.18.
+- Updated Docker base image to Alpine Linux 3.21.
 - Changed ``Dockerfile`` to install lxml as a Python wheel rather than
   as an Alpine package.
 - Introduced virtual environment to Docker container.
