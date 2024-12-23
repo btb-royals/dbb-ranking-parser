@@ -4,7 +4,7 @@ dbbrankingparser.main
 
 Main entry point
 
-:Copyright: 2006-2021 Jochen Kupperschmidt
+:Copyright: 2006-2024 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
 """
 

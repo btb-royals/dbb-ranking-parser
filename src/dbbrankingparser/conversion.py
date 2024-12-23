@@ -5,7 +5,7 @@ dbbrankingparser.conversion
 Conversion of extracted values into a structure of named values of the
 appropriate type.
 
-:Copyright: 2006-2021 Jochen Kupperschmidt
+:Copyright: 2006-2024 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
 """
 

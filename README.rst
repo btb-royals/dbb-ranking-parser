@@ -186,6 +186,6 @@ after it exits.
 .. _Alpine Linux:         https://alpinelinux.org/
 
 
-:Copyright: 2006-2021 Jochen Kupperschmidt
+:Copyright: 2006-2024 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
 :Website: http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
