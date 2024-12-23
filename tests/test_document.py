@@ -3,8 +3,6 @@
 :License: MIT, see LICENSE for details.
 """
 
-import pytest
-
 from dbbrankingparser.document import parse
 
 
