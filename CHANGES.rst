@@ -19,6 +19,8 @@ DBB Ranking Parser Changelog
 - Introduced virtual environment to Docker container.
 - Added GitHub action to build and publish Docker images.
 - Switched build backend from setuptools to Hatchling.
+- Moved single source of truth for version number from
+  ``dbbrankingparser.__init__.VERSION`` to ``pyproject.toml``.
 - Switched code formatter from Black to Ruff.
 
 

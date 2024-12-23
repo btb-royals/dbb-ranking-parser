@@ -9,10 +9,10 @@ Command line interface
 """
 
 from argparse import ArgumentParser
+import importlib.metadata
 import json
 import sys
 
-from . import VERSION
 from .httpserver import serve
 from .main import load_ranking_for_league
 
@@ -31,8 +31,9 @@ def parse_args(args=None):
 def _create_parser() -> ArgumentParser:
     parser = ArgumentParser()
 
+    version = importlib.metadata.version('dbb-ranking-parser')
     parser.add_argument(
-        '--version', action='version', version=f'DBB Ranking Parser {VERSION}'
+        '--version', action='version', version=f'DBB Ranking Parser {version}'
     )
 
     subparsers = parser.add_subparsers(dest='subparser')

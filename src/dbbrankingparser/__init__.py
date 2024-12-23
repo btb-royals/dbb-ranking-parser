@@ -18,6 +18,3 @@ from .main import load_ranking_for_league, load_ranking_from_url
 
 
 __all__ = ['load_ranking_for_league', 'load_ranking_from_url']
-
-
-VERSION = '0.5.0-dev'
