@@ -29,6 +29,9 @@ dbb-ranking-parser = "dbbrankingparser.cli:main"
 
 [project.urls]
 Website = "http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser"
+"Repository (GitHub)" = "https://github.com/btb-royals/dbb-ranking-parser"
+"Repository (Sourcehut)" = "https://sr.ht/~homeworkprod/dbb-ranking-parser/"
+Changelog = "https://github.com/btb-royals/dbb-ranking-parser/blob/main/CHANGES.rst"
 
 [build-system]
 requires = [
