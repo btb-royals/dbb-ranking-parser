@@ -37,15 +37,6 @@ distribution's repositories (as the 'root' user):
     # aptitude update
     # aptitude install python3.9-dev libxml2-dev libxslt1-dev
 
-Apart from that (for example, if those packages are not yet installed)
-it might be easier to install Debian's pre-built binary packages for
-lxml_ instead:
-
-.. code:: sh
-
-    # aptitude update
-    # aptitude install python-lxml
-
 
 Usage
 -----
