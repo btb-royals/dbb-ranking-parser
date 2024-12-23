@@ -9,6 +9,8 @@ DBB Ranking Parser Changelog
 - Updated lxml to at least version 5.3.0.
 - Moved remaining project metadata from ``setup.cfg`` to
   ``pyproject.toml``.
+- Added uv lock file (``uv.lock``) to pin versions of direct and
+  transitive dependencies.
 - Switched build backend from setuptools to Hatchling.
 - Switched code formatter from Black to Ruff.
 
