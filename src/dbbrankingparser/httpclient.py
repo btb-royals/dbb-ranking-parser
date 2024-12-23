@@ -11,7 +11,9 @@ HTTP client utilities
 from urllib.request import Request, urlopen
 
 
-USER_AGENT: str = 'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0'
+USER_AGENT: str = (
+    'Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0'
+)
 
 
 def assemble_url(league_id: int) -> str:

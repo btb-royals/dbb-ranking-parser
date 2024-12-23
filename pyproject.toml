@@ -9,6 +9,9 @@ build-backend = "setuptools.build_meta"
 addopts = "-vv"
 testpaths = ["tests"]
 
+[tool.ruff]
+line-length = 80
+
 [tool.ruff.format]
 quote-style = "single"
 line-ending = "lf"
