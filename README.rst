@@ -51,7 +51,7 @@ there should be a link to a (non-"XL") HTML print version.
 
 Its target URL should look like this (assuming the league's ID is
 12345):
-``http://www.basketball-bund.net/public/tabelle.jsp?print=1&viewDescKey=sport.dbb.views.TabellePublicView/index.jsp_&liga_id=12345``
+``https://www.basketball-bund.net/public/tabelle.jsp?print=1&viewDescKey=sport.dbb.views.TabellePublicView/index.jsp_&liga_id=12345``
 
 The league ID has to be identified manually in any of the URLs specific
 for that league (ranking, schedule, stats).

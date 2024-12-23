@@ -24,7 +24,7 @@ def test_assemble_url_with_non_integer_id():
 
 def test_assemble_url_with_valid_id():
     league_id = 23042
-    expected = 'http://www.basketball-bund.net/public/tabelle.jsp?print=1&viewDescKey=sport.dbb.views.TabellePublicView/index.jsp_&liga_id=23042'
+    expected = 'https://www.basketball-bund.net/public/tabelle.jsp?print=1&viewDescKey=sport.dbb.views.TabellePublicView/index.jsp_&liga_id=23042'
 
     actual = assemble_url(league_id)
 
