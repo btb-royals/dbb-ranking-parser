@@ -25,9 +25,12 @@ Install this package via pip_:
 
     $ pip install dbb-ranking-parser
 
-Because of the dependency on lxml_, this will also require the header
-files for the targeted Python_ version as well as those for libxml2_ and
-libxslt_.
+Pre-built binaries (so-called Python "wheels") should be available for
+supported Python versions and most architectures.
+
+If not, however, it can be necessary to install a compiler and certain
+header files (for the targeted Python_ version as well as those for
+libxml2_ and libxslt_) so that lxml can be built from source.
 
 On `Debian Linux`_, one should be able to install these from the
 distribution's repositories (as the 'root' user):
@@ -35,7 +38,7 @@ distribution's repositories (as the 'root' user):
 .. code:: sh
 
     # aptitude update
-    # aptitude install python3.9-dev libxml2-dev libxslt1-dev
+    # aptitude install build-essential python3.9-dev libxml2-dev libxslt1-dev
 
 
 Usage
