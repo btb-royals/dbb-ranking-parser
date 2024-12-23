@@ -5,6 +5,7 @@ DBB Ranking Parser Changelog
 0.5.0 (unreleased)
 ------------------
 
+- Added support for Python 3.10, 3.11, 3.12, and 3.13.
 - Dropped support for Python 3.6, 3.7, and 3.8 (which are end-of-life).
 - Updated lxml to at least version 5.3.0.
 - Moved remaining project metadata from ``setup.cfg`` to
