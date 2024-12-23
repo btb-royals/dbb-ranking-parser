@@ -169,12 +169,12 @@ after it exits.
 
 
 .. _DBB:                  https://www.basketball-bund.net/
-.. _BTB Royals Oldenburg: http://www.btbroyals.de/
+.. _BTB Royals Oldenburg: https://www.btbroyals.de/
 .. _Python:               https://www.python.org/
-.. _pip:                  http://www.pip-installer.org/
+.. _pip:                  https://www.pip-installer.org/
 .. _lxml:                 https://lxml.de/
-.. _libxml2:              http://xmlsoft.org/XSLT/
-.. _libxslt:              http://xmlsoft.org/XSLT/
+.. _libxml2:              https://xmlsoft.org/XSLT/
+.. _libxslt:              https://xmlsoft.org/XSLT/
 .. _Debian Linux:         https://www.debian.org/
 .. _Docker:               https://www.docker.com/
 .. _Alpine Linux:         https://alpinelinux.org/
@@ -182,4 +182,4 @@ after it exits.
 
 :Copyright: 2006-2024 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
-:Website: http://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
+:Website: https://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
