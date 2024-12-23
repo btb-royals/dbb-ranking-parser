@@ -6,6 +6,7 @@ DBB Ranking Parser Changelog
 ------------------
 
 - Dropped support for Python 3.6, 3.7, and 3.8 (which are end-of-life).
+- Switched code formatter from Black to Ruff.
 
 
 0.4.2 (2021-02-20)

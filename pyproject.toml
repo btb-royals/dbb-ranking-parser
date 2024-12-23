@@ -5,11 +5,16 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
-[tool.black]
-line-length = 80
-skip-string-normalization = true
-target-version = ['py39']
-
 [tool.pytest.ini_options]
 addopts = "-vv"
 testpaths = ["tests"]
+
+[tool.ruff.format]
+quote-style = "single"
+line-ending = "lf"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+lines-after-imports = 2
+order-by-type = false

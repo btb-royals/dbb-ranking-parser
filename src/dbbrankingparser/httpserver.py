@@ -21,7 +21,6 @@ from .main import load_ranking_for_league
 
 
 class RequestHandler(BaseHTTPRequestHandler):
-
     def do_GET(self) -> None:
         league_id = self.extract_league_id_from_path()
 

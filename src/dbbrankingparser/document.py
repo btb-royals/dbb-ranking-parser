@@ -24,9 +24,7 @@ def parse(html: str) -> List[Dict[str, Any]]:
 def _select_rank_rows(html: str) -> List[HtmlElement]:
     """Return the table rows that are expected to contain rank data."""
     root = document_fromstring(html)
-    return root.xpath(
-        'body/form/table[@class="sportView"][2]/tr[position() > 1]'
-    )
+    return root.xpath('body/form/table[@class="sportView"][2]/tr[position() > 1]')
 
 
 def _parse_rank_rows(trs: List[HtmlElement]) -> Iterator[Dict[str, Any]]:

@@ -36,6 +36,5 @@ ATTRIBUTES: List[Tuple[str, Callable[[str], Any]]] = [
 def convert_attributes(values: Iterable[str]) -> Dict[str, Any]:
     """Type-convert and name rank attribute values."""
     return {
-        name: converter(value)
-        for (name, converter), value in zip(ATTRIBUTES, values)
+        name: converter(value) for (name, converter), value in zip(ATTRIBUTES, values)
     }
