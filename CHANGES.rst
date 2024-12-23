@@ -2,31 +2,25 @@ DBB Ranking Parser Changelog
 ============================
 
 
-Version 0.5.0 (unreleased)
---------------------------
+0.5.0 (unreleased)
+------------------
 
 
-Version 0.4.2
--------------
-
-Released on February 20, 2021
+0.4.2 (2021-02-20)
+------------------
 
 - Fixed description of how to run the HTTP server in a Docker container.
 
 
-Version 0.4.1
--------------
-
-Released on February 13, 2021
+0.4.1 (2021-02-13)
+------------------
 
 - Fixed reStructuredText issues in changelog which prevented a release
   on PyPI.
 
 
-Version 0.4
------------
-
-Released on February 13, 2021
+0.4 (2021-02-13)
+----------------
 
 - Added support for Python 3.6, 3.7, 3.8, and 3.9.
 - Dropped support for Python 3.4 and 3.5 (which are end-of-life).
@@ -47,10 +41,8 @@ Released on February 13, 2021
   removing the need for local compilation.
 
 
-Version 0.3.1
--------------
-
-Released March 10, 2016
+0.3.1 (2016-03-10)
+------------------
 
 - Allowed to specify the HTTP server's host and port on the command
   line.
@@ -58,10 +50,8 @@ Released March 10, 2016
   instead of localhost so that exposing the port actually works.
 
 
-Version 0.3
------------
-
-Released March 8, 2016
+0.3 (2016-03-06)
+----------------
 
 - Added HTTP server that wraps the parser and responds with rankings as
   JSON.
@@ -69,10 +59,8 @@ Released March 8, 2016
   server.
 
 
-Version 0.2
------------
-
-Released March 6, 2016
+0.2 (2016-03-06)
+----------------
 
 - It is now sufficient to specify just the league ID instead of the full
   URL. The latter is still possible, though.
@@ -82,9 +70,7 @@ Released March 6, 2016
 - Split code over several modules.
 
 
-Version 0.1
------------
-
-Released March 5, 2016
+0.1 (2016-03-05)
+----------------
 
 - first official release
