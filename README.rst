@@ -10,6 +10,12 @@ website of the `BTB Royals Oldenburg`_ (a basketball team from
 Oldenburg, Germany) where it has proven itself for many, many years.
 
 
+Website
+=======
+
+The official micro website is at: https://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
+
+
 Requirements
 ============
 
@@ -181,6 +187,19 @@ after it exits.
 .. _Alpine Linux:         https://alpinelinux.org/
 
 
-:Copyright: 2006-2025 Jochen Kupperschmidt
-:License: MIT, see LICENSE for details.
-:Website: https://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
+Author
+======
+
+DBB Ranking Parser was created and is maintained by Jochen Kupperschmidt.
+
+
+License
+=======
+
+Copyright (c) 2006-2025 `Jochen Kupperschmidt
+<http://homework.nwsnet.de/>`_
+
+DBB Ranking Parser is licensed under the `MIT License
+<https://choosealicense.com/licenses/mit/>`_.
+
+The license text is provided in the `LICENSE <LICENSE>`_ file.
