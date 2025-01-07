@@ -13,22 +13,22 @@ from functools import partial
 from typing import Any, Callable, cast, Iterable
 
 
-def intpair_factory(separator: str) -> Callable[[str], tuple[int, int]]:
-    return partial(intpair, separator=separator)
+def _intpair_factory(separator: str) -> Callable[[str], tuple[int, int]]:
+    return partial(_intpair, separator=separator)
 
 
-def intpair(value: str, separator: str) -> tuple[int, int]:
+def _intpair(value: str, separator: str) -> tuple[int, int]:
     pair = tuple(map(int, value.split(separator, maxsplit=1)))
     return cast(tuple[int, int], pair)
 
 
-ATTRIBUTES: list[tuple[str, Callable[[str], Any]]] = [
+_ATTRIBUTES: list[tuple[str, Callable[[str], Any]]] = [
     ('rank', int),
     ('name', str),
     ('games', int),
-    ('wonlost', intpair_factory('/')),
+    ('wonlost', _intpair_factory('/')),
     ('points', int),
-    ('baskets', intpair_factory(':')),
+    ('baskets', _intpair_factory(':')),
     ('difference', int),
 ]
 
@@ -37,5 +37,5 @@ def convert_attributes(values: Iterable[str]) -> dict[str, Any]:
     """Type-convert and name rank attribute values."""
     return {
         name: converter(value)
-        for (name, converter), value in zip(ATTRIBUTES, values)
+        for (name, converter), value in zip(_ATTRIBUTES, values)
     }
