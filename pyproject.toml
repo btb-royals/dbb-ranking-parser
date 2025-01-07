@@ -9,7 +9,7 @@ authors = [
 license = { text = "MIT" }
 keywords = [ "basketball", "rankings", "scrape" ]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 6 - Mature",
     "Intended Audience :: Other Audience",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
