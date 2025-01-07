@@ -4,7 +4,7 @@ dbbrankingparser.document
 
 HTML document utilities
 
-:Copyright: 2006-2024 Jochen Kupperschmidt
+:Copyright: 2006-2025 Jochen Kupperschmidt
 :License: MIT, see LICENSE for details.
 """
 
