@@ -1,3 +1,4 @@
+==================
 DBB Ranking Parser
 ==================
 
@@ -10,14 +11,14 @@ Oldenburg, Germany) where it has proven itself for many, many years.
 
 
 Requirements
-------------
+============
 
 - Python_ 3.9+
 - lxml_
 
 
 Installation
-------------
+============
 
 Install this package via pip_:
 
@@ -42,7 +43,7 @@ distribution's repositories (as the 'root' user):
 
 
 Usage
------
+=====
 
 To fetch and parse a league ranking, the appropriate URL is required.
 
@@ -62,7 +63,7 @@ URL structure changes on the DBB website.)
 
 
 Programmatically
-~~~~~~~~~~~~~~~~
+----------------
 
 .. code:: python
 
@@ -93,7 +94,7 @@ fed into a list (as shown above).
 
 
 On the Command Line
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 The package includes a command line script to retrieve a league's
 rankings non-programmatically, as JSON. It requires a league ID as its
@@ -106,7 +107,7 @@ sole argument:
 
 
 Via HTTP
-~~~~~~~~
+--------
 
 Also included is an HTTP wrapper around the parser.
 
@@ -127,7 +128,7 @@ part of the form ``/<league id>``:
 
 
 Docker
-------
+======
 
 DBB Ranking Parser can also be run in a Docker_ container. This avoids
 the local creation of a virtual environment and the installation of the
