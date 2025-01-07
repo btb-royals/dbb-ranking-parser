@@ -8,7 +8,8 @@ HTML document utilities
 :License: MIT, see LICENSE for details.
 """
 
-from typing import Any, Iterator, Optional
+from __future__ import annotations
+from typing import Any, Iterator
 
 from lxml.html import document_fromstring, HtmlElement
 
@@ -37,7 +38,7 @@ def _parse_rank_rows(trs: list[HtmlElement]) -> Iterator[dict[str, Any]]:
             yield rank
 
 
-def _parse_rank_row(tr: HtmlElement) -> Optional[dict[str, Any]]:
+def _parse_rank_row(tr: HtmlElement) -> dict[str, Any] | None:
     """Attempt to extract a single rank's properties from a table row."""
     team_has_withdrawn = _has_team_withdrawn(tr)
 

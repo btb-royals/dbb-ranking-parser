@@ -12,9 +12,9 @@ invalid league id.
 :License: MIT, see LICENSE for details.
 """
 
+from __future__ import annotations
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
-from typing import Optional
 from urllib.parse import urlsplit
 
 from .main import load_ranking_for_league
@@ -40,7 +40,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     def version_string(self) -> str:
         return 'DBB Ranking Parser'
 
-    def extract_league_id_from_path(self) -> Optional[int]:
+    def extract_league_id_from_path(self) -> int | None:
         value = urlsplit(self.path).path.lstrip('/')
 
         try:
