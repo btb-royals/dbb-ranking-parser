@@ -9,8 +9,9 @@ appropriate type.
 :License: MIT, see LICENSE for details.
 """
 
+from collections.abc import Callable, Iterable
 from functools import partial
-from typing import Any, Callable, cast, Iterable
+from typing import Any, cast
 
 
 def _intpair_factory(separator: str) -> Callable[[str], tuple[int, int]]:
