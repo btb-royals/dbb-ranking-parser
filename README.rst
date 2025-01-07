@@ -16,6 +16,16 @@ Website
 The official micro website is at: https://homework.nwsnet.de/releases/4a51/#dbb-ranking-parser
 
 
+Code Status
+===========
+
+|badge_github-actions_test|
+
+.. |badge_github-actions_test| image:: https://github.com/homeworkprod/dbb-ranking-parser/actions/workflows/test.yml/badge.svg
+   :alt: Testing Status
+   :target: https://github.com/homeworkprod/dbb-ranking-parser/actions/workflows/test.yml
+
+
 Requirements
 ============
 
