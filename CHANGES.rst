@@ -5,6 +5,10 @@ DBB Ranking Parser Changelog
 0.6.0 (unreleased)
 ------------------
 
+- Improved README.
+
+- Cleaned up code and continuous integration configuration.
+
 - Added ``.dockerignore`` file.
 
 
