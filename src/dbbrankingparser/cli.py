@@ -55,7 +55,7 @@ def _add_serve_subparser(subparsers) -> None:
     parser.add_argument(
         '--host',
         default=default_host,
-        help='the host to listen on [default: {}]'.format(default_host),
+        help=f'the host to listen on [default: {default_host}]',
     )
 
     default_port = 8080
@@ -63,7 +63,7 @@ def _add_serve_subparser(subparsers) -> None:
         '--port',
         type=int,
         default=default_port,
-        help='the port to listen on [default: {:d}]'.format(default_port),
+        help=f'the port to listen on [default: {default_port:d}]',
     )
 
 

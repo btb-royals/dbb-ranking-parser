@@ -54,5 +54,5 @@ def serve(host: str, port: int) -> None:
     address = (host, port)
 
     server = HTTPServer(address, RequestHandler)
-    print('Listening for HTTP requests on {}:{:d} ...'.format(*address))
+    print(f'Listening for HTTP requests on {address[0]}:{address[1]:d} ...')
     server.serve_forever()
